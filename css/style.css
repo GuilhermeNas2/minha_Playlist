@@ -216,6 +216,9 @@ section {
 @media screen and (min-width: 1000px) and (min-height: 600px) {
     .container-header {
         width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: .7rem;
     }
 
     .container-logo {
@@ -227,6 +230,7 @@ section {
     }
 
     .navigat-list {
+        display: flex;
         width: 47%;
         gap: 0;
     }
@@ -237,8 +241,9 @@ section {
 
     .container-main {
         width: 100%;
+        gap: 3rem;
     }
-
+   
     .content-container {
         width: 90%;
         height: 80%;
@@ -246,7 +251,7 @@ section {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 7rem auto 5rem;
+        margin: 5rem auto 5rem;
        
     }
 
@@ -263,8 +268,8 @@ section {
         background: rgba(0, 0, 0, 0.34) ;
     }
     .container-album p {
-        font-size: 1.8rem;
-        line-height: 2.3rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
         margin-top: 1rem;
     }
     
@@ -278,18 +283,44 @@ section {
         justify-content: center;
     }
 
-    .container-capa .disc {
-        transform: scale(.83, .8);
+    .container-capa .disc {       
         transition: .4s; 
         aspect-ratio: 1;   
     } 
+
+    .nectar {
+        transform: scale(.5, .5);
+    }
+
+    .drake {
+        transform: scale(.6, .7);
+    }
+
+    .gigantes {
+        transform: scale(.6, .6);
+    }
+
+    .damn {
+        transform: scale(.5, .5);
+    }
+
+    .container-footer {
+        width: 100%;
+        background: #0c0c0c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60px;
+        margin-top: 5rem;
+    }
+    
     
 }
 
 
 .container-header {
  display: flex; 
- height: 10%;
+ height: 15%;
  max-height: 90px;
  align-items: center;
  background: rgb(0,0,0);
