@@ -404,13 +404,13 @@ section {
 }
 
 
-.container-capa .disc:hover {
+/* .container-capa .disc:hover {
    transform: scale(.86, .65);
    box-shadow: 
       12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
    100px 100px 80px rgba(0, 0, 0, 0.07) ;
    transition: .4s;
-}
+} */
 
 .vinil-rotate {
     position: absolute;
