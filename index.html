@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="container-logo">
+              <img src="./img/itunes.png" alt="logo">
+            </div>            
+            <label            
+            class="header-label">
+                <button 
+                class="ph ph-magnifying-glass"
+                type="submit"
+                onclick='navegarParaDivImagem()'></button>
+                <input type=""
+                id="nomeInput"
+                placeholder="Pesquise uma música ou álbum">
+            </label>
+            <nav class="navigat-list">
+                <li class="item-header">Menu</li>
+                <li class="item-header">Albúms</li>
+                <li class="item-header">Login</li>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-main">
+            <div class="row-design"></div>
+            <div class="container-headline">
+                <h1>
+                    Meus melhores álbums
+                </h1>
+           </div>
+           <section id="views">
+               <div class="content-container">                   
+                   <div class="container-album">
+                       <p>
+                           "Views" é o quarto álbum de estúdio do rapper canadense Drake, lançado em 2016. O álbum é notável por explorar temas de introspecção, 
+                           crescimento pessoal e relacionamentos. Ele apresenta uma mistura de músicas de hip-hop e R&B, refletindo a versatilidade artística de Drake.
+                           
+                        </p>
+                        <p>
+                            O álbum inclui faixas de destaque como "Hotline Bling", que se tornou um grande sucesso, e "One Dance", 
+                            que alcançou o topo das paradas em muitos países.
+                        </p>
+                    </div>
+                    <div class="container-capa">
+                        <img src="./img/download.jpg" class="disc drake" alt="">
+                        <img src="./img/pngwing.com.png" class="vinil-rotate" alt="">
+                    </div>
+                </div>
+            </section>           
+            <section id="nectar">
+                <div class="content-container">                   
+                    <div class="container-album">
+                        <p>
+                            "O álbum é notável por sua mistura de gêneros musicais, incluindo R&B, 
+                            hip-hop, pop e elementos eletrônicos. "NECTAR" apresenta uma atmosfera melancólica e introspectiva, 
+                            com letras que exploram temas como relacionamentos, solidão e autodescoberta.
+                         </p>
+                         <p>
+                            "NECTAR" recebeu uma recepção positiva da crítica e alcançou sucesso comercial, ajudando Joji a consolidar 
+                            sua posição como um artista musical importante na cena contemporânea. 
+                         </p>
+                     </div>
+                     <div class="container-capa">
+                         <img src="./img/nectar.jpg" class="disc nectar" alt="">
+                         <img src="./img/pngwing.com.png" class="vinil-rotate" alt="">
+                     </div>
+                 </div>
+             </section>          
+             <section id="gigantes">
+                <div class="content-container">                   
+                    <div class="container-album">
+                        <p>
+                            Lançado em 2021, "Gigantes" é o segundo álbum de estúdio do rapper brasileiro BK.O álbum é uma notável contribuição para a cena do rap brasileiro,
+                             e BK é amplamente reconhecido por sua habilidade lírica,
+                            profundidade nas letras e inovação musical.                            
+                         </p>
+                         <p>
+                            "Gigantes" é uma obra que aborda uma variedade de temas, incluindo questões sociais, políticas e introspecção pessoal. 
+                            O álbum mergulha em temas como a desigualdade, racismo, identidade e a experiência de vida nas comunidades urbanas do Brasil.                            
+                         </p>
+                     </div>
+                     <div class="container-capa">
+                         <img src="./img/Gigantes.png" class="disc gigantes" alt="">
+                         <img src="./img/pngwing.com.png" class="vinil-rotate" alt="">
+                     </div>
+                 </div>
+             </section>          
+             <section id="damn">
+                <div class="content-container">                   
+                    <div class="container-album">
+                        <p>
+                            "DAMN." é o quarto álbum de estúdio do renomado rapper e produtor americano Kendrick Lamar, lançado em 2017. 
+                            Este álbum é amplamente considerado uma obra-prima no mundo do hip-hop e da música em geral, e teve um impacto 
+                            significativo na cultura musical contemporânea.
+                         </p>
+                         <p>
+                            Cada faixa de "DAMN." é uma peça do quebra-cabeça, e juntas elas contam uma história coesa que gira em torno de questões existenciais e morais.
+                            O álbum apresenta uma rica variedade de sons e estilos, com produção musical diversificada que vai desde batidas de hip-hop 
+                            tradicionais até influências de jazz e música eletrônica.
+                         </p>
+                     </div>
+                     <div class="container-capa">
+                         <img src="./img/DAMN.jpg" class="disc damn" alt="">
+                         <img src="./img/pngwing.com.png" class="vinil-rotate" alt="">
+                     </div>
+                 </div>
+             </section>           
+        </div>
+    </main>
+    <footer> 
+        <div class="container-footer">
+            <img src="img/itunes.png" alt="">
+        </div>
+    </footer>
+
+    <script>
+        const album = document.querySelector('.drakeDisc');
+        const vinil = document.querySelector('.vinil-rotate');
+
+        album.addEventListener('mouseover', function(){
+            vinil.classList.add('spin')            
+            vinil.style.display = 'flex'
+        })
+        album.addEventListener('mouseout', function(){
+            vinil.classList.remove('spin')
+            vinil.style.display = 'none'
+        })
+
+
+        function navegarParaDivImagem() {   
+            var input = document.getElementById("nomeInput")
+            var nome = input.value.toLowerCase();           
+            var divCorrespondente = document.getElementById(nome);
+
+            
+            if (divCorrespondente) {
+              
+                divCorrespondente.scrollIntoView({ behavior: "smooth" });
+                input.value = "";
+            } else {               
+                alert("Div/Imagem não encontrada para o nome inserido.");
+                console.log('nao')
+            }
+
+           
+        }
+    </script>
+    </body>
+</html>
