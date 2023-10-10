@@ -14,18 +14,20 @@
             <div class="container-logo">
               <img src="./img/itunes.png" alt="logo">
             </div>            
-            <label            
-            class="header-label">
-                <button 
-                class="ph ph-magnifying-glass"
-                type="submit"
-                onclick='navegarParaDivImagem()'></button>
-                <input type=""
-                id="nomeInput"
-                placeholder="Pesquise uma música ou álbum">
-            </label>
-            <nav class="navigat-list">
-                <li class="item-header">Menu</li>
+            <form onsubmit="navegarParaDivImagem(event)">
+                <label            
+                class="header-label">
+                    <button 
+                    class="ph ph-magnifying-glass"
+                    type="submit"
+                    ></button>
+                    <input type=""
+                    id="nomeInput"
+                    placeholder="Pesquise uma música ou álbum">
+                </label>
+            </form>
+        <nav class="navigat-list">
+            <li class="item-header">Menu</li>
                 <li class="item-header">Albúms</li>
                 <li class="item-header">Login</li>
             </nav>
@@ -138,7 +140,8 @@
         })
 
 
-        function navegarParaDivImagem() {   
+        function navegarParaDivImagem(event) {  
+            event.preventDefault() 
             var input = document.getElementById("nomeInput")
             var nome = input.value.toLowerCase();           
             var divCorrespondente = document.getElementById(nome);
@@ -152,7 +155,6 @@
                 alert("Div/Imagem não encontrada para o nome inserido.");
                 console.log('nao')
             }
-
            
         }
     </script>
